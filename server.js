@@ -1,7 +1,7 @@
 "use strict;"
 
 // The port to serve on
-const PORT = 3000;
+const PORT = 5500;
 
 // global variables
 var fs = require('fs');
@@ -66,6 +66,12 @@ function handleRequest(req, res) {
       break;
     case '/images/mobile.jpg':
       serveFile('images/mobile.jpg', 'image/jpeg', req, res);
+      break;
+    case '/permutations.js':
+      serveFile('public/permutations.js', 'text/javascript', req, res);
+      break;
+    case '/grayscale.js':
+      serveFile('public/grayscale.js', 'text/javascript', req, res);
       break;
     // Serve error code
     default:
